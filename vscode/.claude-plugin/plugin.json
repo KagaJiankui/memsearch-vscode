@@ -1,0 +1,7 @@
+{
+  "name": "memsearch-vscode",
+  "version": "0.1.0",
+  "description": "Automatic semantic memory for VSCode Copilot — markdown-first, backed by Milvus",
+  "author": { "name": "Falke" },
+  "license": "MIT"
+}

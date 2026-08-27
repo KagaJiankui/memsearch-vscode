@@ -1,0 +1,26 @@
+{
+  "name": "memsearch-vscode",
+  "owner": {
+    "name": "KagaJiankui"
+  },
+  "metadata": {
+    "description": "Automatic semantic memory for VSCode Copilot — markdown-first, backed by Milvus",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "memsearch-vscode",
+      "description": "Automatic semantic memory for VSCode Copilot — captures sessions, summarizes into daily markdown memory, and recalls via semantic search",
+      "version": "0.1.0",
+      "source": "./vscode",
+      "category": "productivity",
+      "author": {
+        "name": "KagaJiankui"
+      },
+      "homepage": "https://github.com/KagaJiankui/memsearch-vscode",
+      "repository": "https://github.com/KagaJiankui/memsearch-vscode",
+      "license": "MIT",
+      "keywords": ["memory", "semantic-search", "milvus", "vscode", "copilot"]
+    }
+  ]
+}

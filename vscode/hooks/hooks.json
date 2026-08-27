@@ -1,0 +1,65 @@
+{
+  "description": "memsearch memory hooks — SessionStart 注入；Stop 系幂等入队+detached 消费；UserPromptSubmit 打断兜底",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/handler.py\"",
+            "windows": "python \"${CLAUDE_PLUGIN_ROOT}\\scripts\\handler.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/handler.py\"",
+            "windows": "python \"${CLAUDE_PLUGIN_ROOT}\\scripts\\handler.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/handler.py\"",
+            "windows": "python \"${CLAUDE_PLUGIN_ROOT}\\scripts\\handler.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/handler.py\"",
+            "windows": "python \"${CLAUDE_PLUGIN_ROOT}\\scripts\\handler.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/handler.py\"",
+            "windows": "python \"${CLAUDE_PLUGIN_ROOT}\\scripts\\handler.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

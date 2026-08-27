@@ -1,0 +1,14 @@
+# Whitelist repo: only README, plugin manifest dir and the plugin itself
+/*
+!/.gitignore
+!/README.md
+!/.claude-plugin/
+!/vscode/
+
+# Python runtime artifacts
+**/__pycache__/
+*.pyc
+
+# Local runtime state
+**/.memsearch/
+*.log
