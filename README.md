@@ -1,6 +1,6 @@
 # memsearch-vscode
 
-[English] | [简体中文](README.zh-CN.md)
+English | [简体中文](README.zh-CN.md)
 
 [![VSCode Copilot](https://img.shields.io/badge/VSCode-Copilot-007ACC?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/docs/copilot/customization/agent-plugins)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](https://pypi.org/project/memsearch/)
