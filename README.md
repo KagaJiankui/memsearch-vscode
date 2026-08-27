@@ -59,6 +59,17 @@ Restart VSCode — the repo is cloned to the agentPlugins directory and the
 | `UserPromptSubmit` | RAG top-2 memory injection + interrupted-turn recovery |
 | `Stop` / `SubagentStop` / `PreCompact` | Idempotent enqueue → detached consume (summarize → daily markdown → index) |
 
+## Attribution
+
+The prompt files in [`vscode/prompts/`](vscode/prompts/) are **copied verbatim** from
+[zilliztech/memsearch](https://github.com/zilliztech/memsearch)'s
+[`plugins/claude-code/prompts/`](https://github.com/zilliztech/memsearch/tree/main/plugins/claude-code/prompts).
+
+> memsearch is licensed under the MIT License. Copyright (c) Zilliz.
+
+This repository is an independent VSCode plugin built on the memsearch Python package;
+it is not affiliated with or endorsed by the upstream project.
+
 ## License
 
 MIT — built on [zilliztech/memsearch](https://github.com/zilliztech/memsearch).
