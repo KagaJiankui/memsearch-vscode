@@ -1,5 +1,7 @@
 # memsearch-vscode
 
+[English] | [简体中文](README.zh-CN.md)
+
 [![VSCode Copilot](https://img.shields.io/badge/VSCode-Copilot-007ACC?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/docs/copilot/customization/agent-plugins)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](https://pypi.org/project/memsearch/)
 [![memsearch](https://img.shields.io/badge/powered%20by-memsearch-FF6900)](https://github.com/zilliztech/memsearch)
@@ -34,13 +36,11 @@ pip install "memsearch[onnx]"
 python -c "import memsearch"   # verify
 ```
 
-**2. Register the plugin** in VSCode `settings.json`:
-
-```jsonc
-{ "chat.plugins.marketplaces": ["KagaJiankui/memsearch-vscode"] }
-```
-
-Restart VSCode — the repo is cloned to the agentPlugins directory and the
+**2. Install the plugin** in VSCode: open **Extensions** > **Agent Plugins**,
+click **`+`** and enter `KagaJiankui/memsearch-vscode` — or press
+**Ctrl+Shift+P** and run **"Install Plugin from Source"** with the same
+name/repo. Then restart the extension host (or just start a new chat) — the
+repo is cloned to the agentPlugins directory and the
 `.claude-plugin/plugin.json` manifest is picked up automatically.
 
 ## Requirements
