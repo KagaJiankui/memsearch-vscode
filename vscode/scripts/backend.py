@@ -98,6 +98,21 @@ def run(args, input_text=None, timeout=60, env=None):
         return -1, ""
 
 
+def git_toplevel(path):
+    """沿 path 向上找 git 仓库根；不在仓库内或 git 不可用时返回 None。
+
+    对齐上游 plugins/claude-code/hooks/common.sh:41-44 的 git 归一化：落在 git
+    仓库内时上溯到仓库根，避免每-session/子目录各自生成一个 collection。
+    """
+    rc, out = run(["git", "-C", path, "rev-parse", "--show-toplevel"], timeout=5)
+    if rc != 0:
+        return None
+    top = (out or "").strip()
+    if top and os.path.isdir(top):
+        return os.path.abspath(top)
+    return None
+
+
 def pid_alive(pid):
     if not pid or pid <= 0:
         return False

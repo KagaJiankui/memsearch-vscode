@@ -47,9 +47,11 @@ def _respond(obj):
 
 
 def _project_dir(payload):
+    """与上游 common.sh 对齐：候选目录落在 git 仓库内时上溯到仓库根。"""
     for cand in (payload.get("cwd"), os.environ.get("CLAUDE_PROJECT_DIR")):
         if isinstance(cand, str) and cand and os.path.isdir(cand):
-            return os.path.abspath(cand)
+            base = os.path.abspath(cand)
+            return backend.git_toplevel(base) or base
     return os.getcwd()
 
 
@@ -281,9 +283,10 @@ def main():
     except Exception:
         payload = {}
     event = payload.get("hook_event_name") or "unknown"
+    project_dir = _project_dir(payload)
     ctx = {
-        "project_dir": _project_dir(payload),
-        "memsearch_dir": os.path.join(_project_dir(payload), ".memsearch"),
+        "project_dir": project_dir,
+        "memsearch_dir": os.path.join(project_dir, ".memsearch"),
     }
     try:
         if event == "SessionStart":
